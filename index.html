@@ -8,6 +8,7 @@
     <!-- Bottstarp CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 </head>
 
 <body style="background-color: #baf5ba;">
@@ -26,8 +27,9 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Catálogo</a>
-                    <a class="nav-link disabled" aria-disabled="true" href="#">Carrinho</a>
+                    <a class="nav-link" href="/pages/blog.html">Blog</a>
+                    <a class="nav-link " aria-disabled="true" href="/pages/contact.html">Contato</a>
+                    <a class="nav-link " aria-disabled="true" href="#">Catálogo</a>
                 </div>
             </div>
         </div>
@@ -72,25 +74,115 @@
                 <!-- EndForm -->
             </div>
         </div>
-        <div>
-            <!-- StartAboutUs -->
-            <h3 class="pb-2 mb-4 fst-italic border-bottom border-secondary">Sobre nós</h3>
-            <article class="mb-3">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptates impedit, culpa ea corporis
-                    quidem veritatis error, officia molestias distinctio, accusamus aut maxime repudiandae eveniet.
-                    Excepturi facilis eaque asperiores dolores.</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda corrupti nam odit itaque minima,
-                    praesentium odio? Itaque modi dolore, omnis suscipit doloremque ex ipsa iusto dolor, ab at placeat
-                    dolores.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laboriosam laudantium corporis consequatur nam numquam, reprehenderit sequi non expedita quasi veritatis, iure quisquam minima quod? Maxime exercitationem id blanditiis molestias.</p>
-            </article>
-            <!-- EndAbouUs -->
+        <div class="row">
+            <div class="col-8">
+                <!-- StartAboutUs -->
+                <h3 class="pb-2 mb-4 fst-italic border-bottom border-secondary">Sobre nós</h3>
+                <article class="mb-3">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex voluptates impedit, culpa ea
+                        corporis
+                        quidem veritatis error, officia molestias distinctio, accusamus aut maxime repudiandae eveniet.
+                        Excepturi facilis eaque asperiores dolores.</p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda corrupti nam odit itaque
+                        minima,
+                        praesentium odio? Itaque modi dolore, omnis suscipit doloremque ex ipsa iusto dolor, ab at
+                        placeat
+                        dolores.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laboriosam laudantium corporis
+                        consequatur nam numquam, reprehenderit sequi non expedita quasi veritatis, iure quisquam minima
+                        quod? Maxime exercitationem id blanditiis molestias.</p>
+                </article>
+                <!-- EndAbouUs -->
+            </div>
+            <aside class="col-4">
+                <!-- FAQ -->
+                <h3 class="pb-2 mb-4 fst-italic border-bottom border-secondary">FAQ</h3>
+                <div class="justify-content-evenly">
+
+                    <div class="accordion accordion-flush" id="a1">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse1" aria-expanded="false"
+                                    aria-controls="flush-collapse1">
+                                    As plantas são comestiveis?
+                                </button>
+                            </h2>
+                            <div id="flush-collapse1" class="accordion-collapse collapse" data-bs-parent="#a1">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel non incidunt ducimus
+                                    sunt
+                                    eveniet officia, corrupti laboriosam repudiandae quae reiciendis facilis possimus
+                                    quam
+                                    nostrum enim ut, expedita error nam? Adipisci?
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="accordion-item  mt-2">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse2" aria-expanded="false"
+                                    aria-controls="flush-collapse2">
+                                    Sou alérgico, oque faço?
+                                </button>
+                            </h2>
+                            <div id="flush-collapse2" class="accordion-collapse collapse" data-bs-parent="#a1">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel non incidunt ducimus
+                                    sunt
+                                    eveniet officia, corrupti laboriosam repudiandae quae reiciendis facilis possimus
+                                    quam
+                                    nostrum enim ut, expedita error nam? Adipisci?
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="accordion-item mt-2">
+                            <h2 class="accordion-header ">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapse3" aria-expanded="false"
+                                    aria-controls="flush-collapse3">
+                                    Onde compro?
+                                </button>
+                            </h2>
+                            <div id="flush-collapse3" class="accordion-collapse collapse" data-bs-parent="#a1">
+                                <div class="accordion-body">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel non incidunt ducimus
+                                    sunt
+                                    eveniet officia, corrupti laboriosam repudiandae quae reiciendis facilis possimus
+                                    quam
+                                    nostrum enim ut, expedita error nam? Adipisci?
+                                    <br>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- EndFAQ -->
+            </aside>
         </div>
     </div>
-    <footer class="bg-light border-top text-center" style="margin-top: 140px " ;>
-        <div class=" p-2 txt-secondary" style="background-color: #77fc77;">
-            <p>todos os direitos reservados HERABAE</p>
-        </div>
+    <footer class="bg-light border-top text-center" style="margin-top: 140px ">
+        <nav class="row " style="background-color: #77fc77;">
+            <div class="col-7 row">
+                <p class="col"><a class="link-secondary" href="#">TRABALHE CONOSCO</a></p>
+                <p class="col">CONTATO:<a href="#">(49)9 9999-9999</a></p>
+            </div>
+
+            <div class="col-5 row">
+                <h6 class="col">SIGA-NOS:</h6>
+                
+                <p class="col fs-6"><i class="fa-brands fa-facebook"><a class="link-secondary" href="#">FACEBOOK</a></i></p>
+                <p class="col"><i class="fa-brands fa-instagram"><a class="link-secondary" href="#">INSTAGRAM</a></i></p>
+            </div>
+
+        </nav>
     </footer>
 
 
@@ -105,6 +197,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+
+    <!-- Scripts Fontawsome -->
+    <script src="https://kit.fontawesome.com/d5d2b74240.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
