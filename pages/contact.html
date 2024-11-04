@@ -13,42 +13,114 @@
 
 <body style="background-color: #baf5ba;">
     <!-- NavBar -->
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body bg-light">
+                    <form class="mt-4">
+                        <div class="mb-3 pr-2 pl-2 ">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Lembre-se de mim</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Entrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- EndModal -->
     <nav class="navbar navbar-expand-lg" style="background-color: #77fc77;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">HERABAE</a>
+            <a class="navbar-brand p-2" href="#">HERABAE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                     <a class="nav-link" href="./blog.html">Blog</a>
-                    <a class="nav-link " aria-disabled="true" href="./contact.html">Contato</a>
-                    <a class="nav-link " aria-disabled="true" href="#">Catálogo</a>
+                    <a class="nav-link active" aria-disabled="true" href="./contact.html">Contato</a>
+                    <a class="nav-link " aria-disabled="true" href="./catalog.html">Catálogo</a>
+                    <a class="nav-link " aria-disabled="true" href="./about_us.html">Sobre nós</a>
                 </div>
+                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
+                    data-bs-target="#loginModal">
+                    Login
+                </button>
             </div>
         </div>
     </nav>
-    <!-- End NavBar -->
+    <!-- End Nav -->
     <div class="container mt-5 mr-4 ml-4">
         <h2 class="fst-italic">Entre em Contato</h2>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Email" aria-label="Username"
-                aria-describedby="basic-addon1">
-        </div>
-        <div class="mb-3">
+        <form class="mt-4 p-3 rounded" style="background-color: #88ef88;">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">@</span>
+                <input type="text" class="form-control" placeholder="Email" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4"
+                        placeholder="Titulo">
+                </div>
+            </div>
+
             <div class="input-group">
-                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4"
-                    placeholder="Titulo">
+                <textarea class="form-control" aria-label="With textarea" placeholder="Conteudo..."
+                    rows="10"></textarea>
+            </div>
+            <button onclick="alert('Muito obrigado pela sugestão')" class="btn btn-success mt-3">Enviar</button>
+        </form>
+        <div class="row mt-5">
+            <div class="col-5">
+
+                <h3 class="pb-2 mb-4 fst-italic border-bottom border-secondary">Localização</h3>
+
+                <iframe width="450" height="400"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-52.66605377197266%2C-27.157073194169662%2C-52.54159927368164%2C-27.071354789865012&amp;layer=mapnik"
+                    style="border: 1px solid black"></iframe><br />
+                <small><a class="btn btn-success" href="https://www.openstreetmap.org/#map=13/-27.11422/-52.60383">Ver
+                        mapa ampliado</a></small>
+            </div>
+            <div class="col-7">
+                <h3 class="pb-2 mb-4 fst-italic border-bottom border-secondary">Venha nos conhecer</h3>
+                <article class="mb-3">
+                    <p style="text-align:justify"> Estamos localizados em Chapecó - Santa Catarina</p>
+                    <p style="text-align:justify"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                        numquam voluptas repudiandae animi magnam cupiditate. Debitis aut perferendis corporis incidunt,
+                        distinctio nostrum voluptas laboriosam eius quos. Explicabo labore earum officiis.</p>
+                    <p style="text-align:justify"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+                        numquam voluptas repudiandae animi magnam cupiditate. Debitis aut perferendis corporis incidunt,
+                        distinctio nostrum voluptas laboriosam eius quos. Explicabo labore earum officiis.</p>
+                    <p style="text-align:justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                        nobis aut, in sapiente quidem laudantium sequi corporis voluptatem non, vitae adipisci magnam
+                        magni accusamus eaque, cumque suscipit ab vel. Nam, laudantium cupiditate praesentium
+                        voluptatibus veritatis id soluta molestiae repellat dolore commodi quaerat ea ratione placeat
+                        facere minus adipisci fugit similique aspernatur assumenda cumque. Placeat esse eius suscipit
+                        eos, explicabo maiores amet, voluptates quos consequuntur exercitationem tempora ducimus
+                        reiciendis numquam minima?</p>
+
+                </article>
             </div>
         </div>
-
-        <div class="input-group">
-            <textarea class="form-control" aria-label="With textarea" placeholder="Conteudo..." rows="10"></textarea>
-        </div>
-        <button class="btn btn-success mt-3">Enviar</button>
     </div>
     <footer class="bg-light border-top text-center" style="margin-top: 140px ">
         <nav class="row " style="background-color: #77fc77;">
