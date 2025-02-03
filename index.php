@@ -1,76 +1,9 @@
-<!doctype html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HERABAE</title>
-    <!-- Bottstarp CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+include "./php/base/header.php";
+?>
 
-</head>
-
-<body style="background-color: #baf5ba;">
-    <!-- NavBar -->
-    <!-- Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="loginModalLabel">Login</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body bg-light">
-                    <form class="mt-4">
-                        <div class="mb-3 pr-2 pl-2 ">
-                            <label for="exampleInputEmail1" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Senha</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Lembre-se de mim</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Entrar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- EndModal -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #77fc77;">
-        <div class="container-fluid">
-            <a class="navbar-brand p-2" href="#">HERABAE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="./pages/blog.html">Blog</a>
-                    <a class="nav-link " aria-disabled="true" href="./pages/contact.html">Contato</a>
-                    <a class="nav-link " aria-disabled="true" href="./pages/catalog.html">Catálogo</a>
-                    <a class="nav-link " aria-disabled="true" href="./pages/about_us.html">Sobre nós</a>
-                </div>
-                <button type="button" class="btn btn-outline-success" data-bs-toggle="modal"
-                    data-bs-target="#loginModal">
-                    Login
-                </button>
-            </div>
-        </div>
-    </nav>
-    <!-- End NavBar -->
-    <div class="container mt-5 mr-4 ml-4">
-
-        <div class="row mb-5">
+<div class="row mb-5">
             <div class="col-12">
                 <!-- StartSlides -->
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -232,41 +165,7 @@
                         mapa ampliado</a></small>
             </div>
         </div>
-    </div>
-    <footer class="bg-light border-top text-center" style="margin-top: 140px ">
-        <nav class="row " style="background-color: #77fc77;">
-            <div class="col-7 row">
-                <p class="col"><a class="link-secondary" href="#">TRABALHE CONOSCO</a></p>
-                <p class="col">CONTATO:<a href="#">(49)9 9999-9999</a></p>
-            </div>
 
-            <div class="col-5 row">
-                <h6 class="col">SIGA-NOS:</h6>
-
-                <p class="col fs-6"><i class="fa-brands fa-facebook"><a class="link-secondary" href="#">FACEBOOK</a></i>
-                </p>
-                <p class="col"><i class="fa-brands fa-instagram"><a class="link-secondary" href="#">INSTAGRAM</a></i>
-                </p>
-            </div>
-
-        </nav>
-    </footer>
-
-
-
-    <!-- Scripts Bootstrap -->
-    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-
-    <!-- Scripts Fontawsome -->
-    <script src="https://kit.fontawesome.com/d5d2b74240.js" crossorigin="anonymous"></script>
-</body>
-
-</html>
+<?php
+include "./php/base/footer.php";
+?>
