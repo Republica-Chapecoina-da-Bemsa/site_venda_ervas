@@ -1,6 +1,10 @@
 <?php
 
 include "./php/base/header.php";
+include "./php/admin/db.class.php";
+
+    $db = new db("user");
+    $db->checkLogin();
 ?>
 
 <div class="row mb-5">

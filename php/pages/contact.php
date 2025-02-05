@@ -1,4 +1,8 @@
-<?php include "../base/header.php";?>
+<?php include "../base/header.php";
+include "../admin/db.class.php";
+
+$db = new db("user");
+$db->checkLogin();?>
 <h2 class="fst-italic">Entre em Contato</h2>
         <form class="mt-4 p-3 rounded" style="background-color: #88ef88;">
             <div class="input-group mb-3">

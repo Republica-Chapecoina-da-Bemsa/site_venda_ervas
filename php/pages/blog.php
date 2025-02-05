@@ -1,4 +1,10 @@
-<?php include "../base/header.php";?>
+<?php 
+include "../base/header.php";
+include "../admin/db.class.php";
+
+    $db = new db("user");
+    $db->checkLogin();
+    ?>
 <div class="container mt-5 mr-4 ml-4">
         <div class="row gap-1">
             <aside class="col-2 mr-0">

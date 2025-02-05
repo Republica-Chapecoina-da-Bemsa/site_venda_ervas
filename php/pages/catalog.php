@@ -1,4 +1,8 @@
-<?php include "../base/header.php";?>
+<?php include "../base/header.php";
+include "../admin/db.class.php";
+
+$db = new db("user");
+$db->checkLogin();?>
 <div class="row mt-2 gap-2">
             <div class="card col pt-2">
                 <img src="../img/Camomila.jpg" style="max-height: 200px;" class="card-img-top" alt="...">

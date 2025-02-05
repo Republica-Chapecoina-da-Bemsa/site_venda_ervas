@@ -8,7 +8,7 @@ class db
     private $password = "";
     private $port = "3306";
     private $table_name;
-    private $dbname = "db_pweb1_2024_2_blog";
+    private $dbname = "db_site_venda_ervas";
 
     public function __construct($table_name)
     {
@@ -135,7 +135,7 @@ class db
         $stmt = $conn->prepare($sql);
         $stmt->execute([$data["login"]]);
         $result = $stmt->fetch();
-        if(password_verify($data["senha"],$result['senha'])){
+        if(password_verify($data["password"],$result['password'])){
             return $result;
         }else{
             return "error";
@@ -147,7 +147,9 @@ class db
         session_start();
         if(empty($_SESSION['nome'])){
             session_destroy();
-            header("Location: ../Login.php?error=sessao-expirada");
+            header("Location: ../../../../site_venda_ervas/php/admin/user/login.php?error=sessao-expirada");
+            return false;
         }
+        return true;
     }
 }

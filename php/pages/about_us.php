@@ -1,4 +1,8 @@
-<?php include "../base/header.php";?>
+<?php include "../base/header.php";
+include "../admin/db.class.php";
+
+$db = new db("user");
+$db->checkLogin();?>
 <div class="row gap-1">
             <aside class="col-2 mr-0">
                 <div class="position-sticky mt-2 top-0">
