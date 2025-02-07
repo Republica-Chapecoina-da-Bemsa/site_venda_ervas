@@ -137,19 +137,22 @@ class db
         $result = $stmt->fetch();
         if(password_verify($data["password"],$result['password'])){
             return $result;
+
         }else{
             return "error";
         }
 
     }
 
-    function checkLogin(){
+function checkLogin(){
+
         session_start();
+
         if(empty($_SESSION['nome'])){
             session_destroy();
-            header("Location: ../../../../site_venda_ervas/php/admin/user/login.php?error=sessao-expirada");
-            return false;
+            header("Location: ../../../../site_venda_ervas/php/admin/user/login.php?error=$_SESSION");
         }
-        return true;
+
+
     }
 }

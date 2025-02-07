@@ -1,5 +1,5 @@
 <?php
-include "./db.class.php";
+include "../db.class.php";
 $db = new db("user");
 if (!empty($_POST)) {
     if ($_POST['password'] === $_POST["c_password"]) {
@@ -8,7 +8,7 @@ if (!empty($_POST)) {
         unset($_POST['c_password']);
         $db->insert($_POST);
 
-        header("Location:Login.php");
+        header("Location:login.php");
     } else {
         echo "<b>Senhas não coincidem</b>";
     }
@@ -17,9 +17,8 @@ if (!empty($_POST)) {
 
 ?>
 
-<form action="UsuarioForm.php" method="post">
+<form action="userForm.php" method="post">
     <input type="hidden" name="id" value="<?php echo $data->id ?? '' ?>">
-    <input type="hidden" name="status" value="1">
 
     <h4>Formulário Usuario</h4>
     <label for="">Nome</label><br>
