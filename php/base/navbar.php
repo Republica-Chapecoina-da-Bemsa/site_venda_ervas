@@ -1,8 +1,8 @@
 <?php
 $base_url = (basename(getcwd()) != "pages") ? "php/pages/" : "./";
-$base_url = (basename(getcwd()) != "user") ? $base_url : "../../../" . $base_url;
+$base_url = (basename(getcwd()) != "user" && basename(getcwd())!="herbs" && basename(getcwd())!="posts" && basename(getcwd())!="suppliers") ? $base_url : "../../../" . $base_url;
 $index_url = (basename(getcwd()) != "site_venda_ervas") ? "../../index.php" : "#";
-$index_url = (basename(getcwd()) != "user") ? $index_url : "../" . $index_url;
+$index_url = (basename(getcwd()) != "user" && basename(getcwd())!="herbs" && basename(getcwd())!="posts" && basename(getcwd())!="suppliers" ) ? $index_url : "../" . $index_url;
 
 
 ?>
@@ -23,7 +23,18 @@ $index_url = (basename(getcwd()) != "user") ? $index_url : "../" . $index_url;
                 <a class="nav-link " aria-disabled="true" href="<?php echo $base_url ?>about_us.php">Sobre nós</a>
             </div>
         </div>
-        
+        <div class="dropstart">
+            <button class="btn btn-sucess dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Admin
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/user/userList.php">Lista de usuários</a></li>
+                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/suppliers/suppliersList.php">Lista de fornecedores</a></li>
+                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/user/userList.php">Lista de ervas</a></li>
+                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/user/userList.php">Lista de posts</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
 <!-- End Nav -->

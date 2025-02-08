@@ -36,8 +36,8 @@ if (!empty($_GET['logout'])) {
                 <?php endif; ?>
                 <form method="post" class="mt-4">
                     <div class="mb-3 pr-2 pl-2">
-                        <label for="email" class="form-label">login</label>
-                        <input type="text" class="form-control" id="email" name="login" required>
+                        <label for="login" class="form-label">login</label>
+                        <input type="text" class="form-control" id="login" name="login" required>
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label">Senha</label>

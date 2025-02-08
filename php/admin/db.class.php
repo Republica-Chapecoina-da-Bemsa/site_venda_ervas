@@ -95,11 +95,11 @@ class db
     public function filter($data)
     {
 
-        $tipo = $data['tipo'];
-        $val = $data['valor'];
+        $field = $data['field'];
+        $val = $data['val'];
         $conn = $this->conn();
 
-        $sql = "SELECT * FROM $this->table_name WHERE $tipo LIKE ?";
+        $sql = "SELECT * FROM $this->table_name WHERE $field LIKE ?";
         $stmt = $conn->prepare($sql);
         $stmt->execute(["%$val%",]);
 
