@@ -41,9 +41,9 @@ if (!empty(($_POST))) {
                     <td><?php echo $user->name ?></td>
                     <td><?php echo $user->email; ?></td>
                     <td>
-                        <a href="userForm.php?id=<?php echo $user->id; ?>" class="btn btn-primary btn-sm">Edit</a>
+                        <a href="userForm.php?id=<?php echo $user->id; ?>" class="btn btn-primary btn-sm">Editar</a>
                         <a href="userList.php?id=<?php echo $user->id; ?>"
-                            onclick='return confirm(` Deseja realmete excluir?`)' class="btn btn-danger btn-sm">Delete</a>
+                            onclick='return confirm(` Deseja realmete excluir?`)' class="btn btn-danger btn-sm">Deletar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

@@ -10,8 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color: #baf5ba;">
+<body style="background-color: #baf5ba; min-height: 500px;">
 <?php include "navbar.php"?>
 
-<div class="container mt-5 mr-4 ml-4">
+<div style="min-height: 470px;" class="container mt-5 mr-4 ml-4">
 

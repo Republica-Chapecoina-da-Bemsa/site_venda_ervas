@@ -31,8 +31,8 @@ $index_url = (basename(getcwd()) != "user" && basename(getcwd())!="herbs" && bas
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/user/userList.php">Lista de usuários</a></li>
                 <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/suppliers/suppliersList.php">Lista de fornecedores</a></li>
-                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/user/userList.php">Lista de ervas</a></li>
-                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/user/userList.php">Lista de posts</a></li>
+                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/posts/postList.php">Lista de posts</a></li>
+                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/herbs/herbList.php">Lista de ervas</a></li>
             </ul>
         </div>
     </div>

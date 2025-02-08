@@ -43,10 +43,10 @@ if(!empty(($_POST))){
                     <td><?php echo $supplier->name ?></td>
                     <td><?php echo $supplier->cnpj ?></td>
                     <td><?php echo $supplier->email; ?></td>
-                    <td><?php echo $supplier->name ?></td>
+                    <td><?php echo $supplier->farm ?></td>
                     <td>
-                        <a href="suppliersForm.php?id=<?php echo $supplier->id; ?>" class="btn btn-primary btn-sm">Edit</a>
-                        <a href="suppliersList.php?id=<?php echo $supplier->id; ?>" onclick='return confirm(` Deseja realmete excluir?`)' class="btn btn-danger btn-sm">Delete</a>
+                        <a href="suppliersForm.php?id=<?php echo $supplier->id; ?>" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="suppliersList.php?id=<?php echo $supplier->id; ?>" onclick='return confirm(` Deseja realmete excluir?`)' class="btn btn-danger btn-sm">Deletar</a>
                     </td>
                 </tr>
             <?php endforeach; ?>
