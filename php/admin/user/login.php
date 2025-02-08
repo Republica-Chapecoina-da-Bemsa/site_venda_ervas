@@ -43,12 +43,11 @@ if (!empty($_GET['logout'])) {
                         <label for="password" class="form-label">Senha</label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="remember" name="remember">
-                        <label class="form-check-label" for="remember">Lembre-se de mim</label>
-                    </div>
                     <div class="d-grid">
                         <button type="submit" class="btn btn-success">Entrar</button>
+                    </div>
+                    <div class="d-grid">
+                        <a href="userForm.php" class="btn btn-primary mt-3">Cadastrar</a>
                     </div>
                 </form>
             </div>
