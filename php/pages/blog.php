@@ -2,8 +2,9 @@
 include "../base/header.php";
 include "../admin/db.class.php";
 
-    $db = new db("user");
+    $db = new db("post");
     $db->checkLogin();
+    $posts = $db->all();
     ?>
 <div class="container mt-5 mr-4 ml-4">
         <div class="row gap-1">
@@ -47,56 +48,15 @@ include "../admin/db.class.php";
             <div class="col-9">
                 <h2 class="pb-4 mb-4 fst-italic border-botton">BLOG HERABAE</h2>
 
+                <?php foreach ($posts as $post): ?>
                 <article class="blog-post mb-3">
-                    <h2 class="blog-post-title border-bottom border-secondary">As Plantas</h2>
-                    <p style="text-align:justify"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Asperiores repudiandae iusto laudantium nihil beatae quae eum magni sequi recusandae,
-                        corrupti ullam voluptates, nobis dicta ratione porro cumque itaque totam eos? </p>
-                    <p style="text-align:justify"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                        impedit, necessitatibus voluptatum molestias blanditiis deleniti dolorem nisi nihil libero
-                        dolores provident vitae obcaecati fuga voluptate quibusdam tenetur repellat ratione cumque.
-                    </p>
-                    <p style="text-align:justify"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
-                        molestias ipsam culpa recusandae illum totam? Officia, nesciunt, ipsa animi unde recusandae
-                        corrupti voluptate veniam natus labore commodi, porro repellat quae. </p>
-                    <p style="text-align:justify"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Adipisci, qui fugit harum autem natus numquam animi incidunt, ab quia eos pariatur,
-                        architecto repellat voluptatum ex! Magni quae facere officia eaque! </p>
+                    <h2 class="blog-post-title border-bottom border-secondary"><?php echo htmlspecialchars($post->name); ?></h2>
+                    <p class="blog-post-category"><strong>Categoria:</strong> <?php echo htmlspecialchars($post->category); ?></p>
+                    <p style="text-align:justify"><?php echo nl2br(htmlspecialchars($post->description)); ?></p>
+                <p class="blog-post-meta"><?php echo htmlspecialchars($post->date); ?> por <a href="#"><?php echo htmlspecialchars($post->author); ?></a></p>
                 </article>
+                <?php endforeach; ?>
 
-                <article class="blog-post mb-3">
-                    <h2 class="blog-post-title border-bottom border-secondary">A Produção</h2>
-                    <p style="text-align:justify"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Asperiores repudiandae iusto laudantium nihil beatae quae eum magni sequi recusandae,
-                        corrupti ullam voluptates, nobis dicta ratione porro cumque itaque totam eos? </p>
-                    <p style="text-align:justify"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                        impedit, necessitatibus voluptatum molestias blanditiis deleniti dolorem nisi nihil libero
-                        dolores provident vitae obcaecati fuga voluptate quibusdam tenetur repellat ratione cumque.
-                    </p>
-                    <p style="text-align:justify"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
-                        molestias ipsam culpa recusandae illum totam? Officia, nesciunt, ipsa animi unde recusandae
-                        corrupti voluptate veniam natus labore commodi, porro repellat quae. </p>
-                    <p style="text-align:justify"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Adipisci, qui fugit harum autem natus numquam animi incidunt, ab quia eos pariatur,
-                        architecto repellat voluptatum ex! Magni quae facere officia eaque! </p>
-                </article>
-
-                <article class="blog-post mb-3">
-                    <h2 class="blog-post-title border-bottom border-secondary">Consmo</h2>
-                    <p style="text-align:justify"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Asperiores repudiandae iusto laudantium nihil beatae quae eum magni sequi recusandae,
-                        corrupti ullam voluptates, nobis dicta ratione porro cumque itaque totam eos? </p>
-                    <p style="text-align:justify"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                        impedit, necessitatibus voluptatum molestias blanditiis deleniti dolorem nisi nihil libero
-                        dolores provident vitae obcaecati fuga voluptate quibusdam tenetur repellat ratione cumque.
-                    </p>
-                    <p style="text-align:justify"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
-                        molestias ipsam culpa recusandae illum totam? Officia, nesciunt, ipsa animi unde recusandae
-                        corrupti voluptate veniam natus labore commodi, porro repellat quae. </p>
-                    <p style="text-align:justify"> Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                        Adipisci, qui fugit harum autem natus numquam animi incidunt, ab quia eos pariatur,
-                        architecto repellat voluptatum ex! Magni quae facere officia eaque! </p>
-                </article>
                 <div class="input-group gap-2 mt-5 mb-5">
                     <button class="rounded-5 btn btn-outline-success" href="#">Antigos</button>
                     <button class="rounded-5 btn btn-outline-secondary" disabled href="#">Novos</button>
