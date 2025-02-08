@@ -1,4 +1,5 @@
 <?php
+session_start();
 $base_url = (basename(getcwd()) != "pages") ? "php/pages/" : "./";
 $base_url = (basename(getcwd()) != "user" && basename(getcwd())!="herbs" && basename(getcwd())!="posts" && basename(getcwd())!="suppliers") ? $base_url : "../../../" . $base_url;
 $index_url = (basename(getcwd()) != "site_venda_ervas") ? "../../index.php" : "#";
@@ -26,13 +27,17 @@ $index_url = (basename(getcwd()) != "user" && basename(getcwd())!="herbs" && bas
         <div class="dropstart">
             <button class="btn btn-sucess dropdown-toggle" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
-                Admin
+                Menu
             </button>
+
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/user/userList.php">Lista de usuários</a></li>
-                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/suppliers/suppliersList.php">Lista de fornecedores</a></li>
-                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/posts/postList.php">Lista de posts</a></li>
-                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/herbs/herbList.php">Lista de ervas</a></li>
+                <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/user/login.php">Login</a></li>
+                <?php if (!empty($_SESSION["admin"]) && $_SESSION['admin'] == 1): ?>
+                    <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/user/userList.php">Lista de usuários</a></li>
+                    <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/suppliers/suppliersList.php">Lista de fornecedores</a></li>
+                    <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/posts/postList.php">Lista de posts</a></li>
+                    <li><a class="dropdown-item" href="../../../../site_venda_ervas/php/admin/herbs/herbList.php">Lista de ervas</a></li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>

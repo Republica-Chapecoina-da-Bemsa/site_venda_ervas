@@ -1,7 +1,6 @@
 <?php
 include "../../base/header.php";
 include "../db.class.php";
-session_start();
 
 $db = new db("user");
 if (!empty($_POST)) {
@@ -41,6 +40,7 @@ if((!empty($_GET['id']))){
                 <?php endif; ?>
                 <form action="userForm.php" method="post">
                     <input type="hidden" name="id" value="<?php echo $data->id ?? '' ?>">
+                    <input type="hidden" name="admin" value="0">
                     <div class="mb-3 pr-2 pl-2">
                         <label for="name" class="form-label">name</label>
                         <input type="text" class="form-control" id="name" name="name" value="<?php echo $data->name ?? '' ?>" required>

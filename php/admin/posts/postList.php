@@ -1,8 +1,10 @@
 <?php
 include "../../base/header.php";
 include "../db.class.php";
+
 $db = new db('post');
 $db->checkLogin();
+$db->checkAdminLogin();
 
 if(!empty($_GET["id"])){
     $db->destroy($_GET["id"]);

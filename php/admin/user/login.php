@@ -1,7 +1,6 @@
 <?php
 include "../../base/header.php";
 include "../db.class.php";
-session_start();
 
 $db = new db('user');
 
@@ -10,6 +9,7 @@ if (!empty($_POST)) {
     if ($usuario !== "error") {
         $_SESSION['login'] = $usuario["login"];
         $_SESSION['nome'] = $usuario["name"];
+        $_SESSION['admin'] = $usuario["admin"];
         header("location: ../../../index.php");
         exit();
     } else {
@@ -47,7 +47,10 @@ if (!empty($_GET['logout'])) {
                         <button type="submit" class="btn btn-success">Entrar</button>
                     </div>
                     <div class="d-grid">
-                        <a href="userForm.php" class="btn btn-primary mt-3">Cadastrar</a>
+                        <a href="userForm.php" class="btn btn-primary mt-3">Cadastrese aqui</a>
+                    </div>
+                    <div class="d-grid">
+                        <a href="login.php?logout=true" class="btn btn-danger mt-3">Logout</a>
                     </div>
                 </form>
             </div>

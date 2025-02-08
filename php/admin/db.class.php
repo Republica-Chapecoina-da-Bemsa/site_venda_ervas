@@ -52,11 +52,11 @@ class db
         }
         $sql .= ") VALUES (";
         $flag = 0;
-        
+
         foreach ($data as $campo => $valor) {
             $sql .= $flag == 0 ? "?" : ",?";
             $flag = 1;
-            $array_values[] = $valor; 
+            $array_values[] = $valor;
         }
         $sql .= ")";
 
@@ -106,7 +106,7 @@ class db
         return $stmt->fetchALL(PDO::FETCH_CLASS);
 
     }
-    public function find($id,$table_name=null)
+    public function find($id, $table_name = null)
     {
         $conn = $this->conn();
         $table_name = !empty($table_name) ? $table_name : $this->table_name;
@@ -129,28 +129,38 @@ class db
 
     }
 
-    public function login($data){
+    public function login($data)
+    {
         $conn = $this->conn();
         $sql = "SELECT * FROM $this->table_name Where login = ?";
         $stmt = $conn->prepare($sql);
         $stmt->execute([$data["login"]]);
         $result = $stmt->fetch();
-        if(password_verify($data["password"],$result['password'])){
+        if (password_verify($data["password"], $result['password'])) {
             return $result;
 
-        }else{
+        } else {
             return "error";
         }
 
     }
 
-function checkLogin(){
+    function checkLogin()
+    {
 
-        session_start();
 
-        if(empty($_SESSION['nome'])){
+        if (empty($_SESSION['nome'])) {
             session_destroy();
-            header("Location: ../../../../site_venda_ervas/php/admin/user/login.php?error=$_SESSION");
+            header("Location: ../../../../site_venda_ervas/php/admin/user/login.php?error=secao_expirada");
+        }
+
+
+    }
+    function checkAdminLogin()
+    {
+        if ($_SESSION['admin']=="0") {
+            session_destroy();
+            header("Location: ../../../../site_venda_ervas/php/admin/user/login.php?error=nao_autorizado");
         }
 
 

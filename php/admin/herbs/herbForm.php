@@ -3,6 +3,9 @@ include "../../base/header.php";
 include "../db.class.php";
 
 $db = new db("herbs");
+$db->checkLogin();
+$db->checkAdminLogin();
+
 $suppliers = $db->all('supplier');
 if (!empty($_POST)) {
     if (!empty($_POST)) {

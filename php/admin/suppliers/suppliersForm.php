@@ -3,6 +3,9 @@ include "../../base/header.php";
 include "../db.class.php";
 
 $db = new db("supplier");
+$db->checkLogin();
+$db->checkAdminLogin();
+
 if (!empty($_POST)) {
     if (!empty($_POST)) {
         if (!empty($_POST['id'])) {
