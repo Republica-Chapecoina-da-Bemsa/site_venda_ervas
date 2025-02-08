@@ -49,13 +49,11 @@ if (!empty($_GET['logout'])) {
                     <div class="d-grid">
                         <a href="userForm.php" class="btn btn-primary mt-3">Cadastrese aqui</a>
                     </div>
-                    <div class="d-grid">
-                        <a href="login.php?logout=true" class="btn btn-danger mt-3">Logout</a>
-                    </div>
                 </form>
             </div>
             <div class="card-footer text-end">
-                <button type="button" class="btn btn-secondary">Close</button>
+            <a href="login.php?logout=true" class="btn btn-danger mt-3">Logout</a>
+
             </div>
         </div>
     </div>
