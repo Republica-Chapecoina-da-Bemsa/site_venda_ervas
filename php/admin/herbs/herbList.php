@@ -28,7 +28,9 @@ if (!empty(($_POST))) {
             <input class="form-control" type="text" name="val">
             <button class="btn btn-success" type="submit">Buscar</button>
         </div>
+        <a href="herbForm.php" class="btn btn-success btn-sm">Nova erva</a>
     </form>
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -67,7 +69,6 @@ if (!empty(($_POST))) {
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="herbForm.php" class="btn btn-success btn-sm">Nova erva</a>
 </div>
 
 

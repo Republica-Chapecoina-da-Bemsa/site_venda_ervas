@@ -26,6 +26,7 @@ if(!empty(($_POST))){
         <input class="form-control" type="text" name="val">
         <button class="btn btn-success" type="submit">Buscar</button>
     </div>
+    <a href="suppliersForm.php" class="btn btn-success btn-sm">Novo Forncedor</a>
     </form>
     <table class="table table-striped">
         <thead>
@@ -54,7 +55,6 @@ if(!empty(($_POST))){
             <?php endforeach; ?>
         </tbody>
     </table>
-    <a href="suppliersForm.php" class="btn btn-success btn-sm">Novo Forncedor</a>
 </div>
 
 

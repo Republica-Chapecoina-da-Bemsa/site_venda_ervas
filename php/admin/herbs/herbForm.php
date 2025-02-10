@@ -8,14 +8,14 @@ $db->checkAdminLogin();
 
 $suppliers = $db->all('supplier');
 if (!empty($_POST)) {
-    if (!empty($_POST)) {
-        if (!empty($_POST['id'])) {
-            $db->update($_POST);
-        } else
-            $db->insert($_POST);
 
-        header("Location:herbList.php");
-    }
+    if (!empty($_POST['id'])) {
+        $db->update($_POST);
+    } else
+        $db->insert($_POST);
+
+    header("Location:herbList.php");
+
 }
 if ((!empty($_GET['id']))) {
     $data = $db->find($_GET['id']);
