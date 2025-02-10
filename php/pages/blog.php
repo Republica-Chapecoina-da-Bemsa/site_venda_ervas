@@ -64,4 +64,5 @@ include "../admin/db.class.php";
             </div>
 
         </div>
+    </div>
 <?php include "../base/footer.php";?>
